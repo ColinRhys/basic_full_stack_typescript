@@ -1,5 +1,3 @@
-// components/Modal/index.tsx
-
 import React from 'react';
 import { Overlay, Content } from './styles';
 
@@ -15,7 +13,7 @@ const Modal: React.FC<ModalProps> = ({ children, onClose }) => {
   };
 
   const handleContentClick = (e: React.MouseEvent<HTMLDivElement>) => {
-    e.stopPropagation(); // Prevent clicks inside the modal from closing it
+    e.stopPropagation();
   };
 
   return (

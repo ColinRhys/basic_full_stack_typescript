@@ -15,12 +15,12 @@ const HomePage: React.FC = () => {
   const { removeIssue } = useDeleteIssue();
 
   const handleIssueCreatedOrUpdated = () => {
-    setReload(!reload); // Trigger re-fetch in IssueList
+    setReload(!reload); 
   };
 
   const handleDeleteIssue = async (id: string) => {
     await removeIssue(id);
-    setReload(!reload); // Trigger re-fetch in IssueList
+    setReload(!reload); 
   };
 
   return (
@@ -32,7 +32,7 @@ const HomePage: React.FC = () => {
           <Button onClick={() => setShowForm(true)}>Create New Issue</Button>
         </Header>
         <IssueList
-          key={reload.toString()} // Force re-render on reload
+          key={reload.toString()} 
           onSelectIssue={issue => setSelectedIssue(issue)}
           onDeleteIssue={handleDeleteIssue}
         />
@@ -60,7 +60,6 @@ const HomePage: React.FC = () => {
 
 export default HomePage;
 
-// Styled components
 const Container = styled.div`
   padding: 20px;
   max-width: 800px;
